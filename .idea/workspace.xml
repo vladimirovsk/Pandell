@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a93bb62a-39c1-4c7c-bddc-0313f7d7e2b8" name="Changes" comment="first commit" />
+    <list default="true" id="a93bb62a-39c1-4c7c-bddc-0313f7d7e2b8" name="Changes" comment="first commit">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/generate-array.js" beforeDir="false" afterPath="$PROJECT_DIR$/generate-array.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -39,9 +45,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "com.google.cloudcode.ide_session_index": "20240318_0002",
+    "com.google.cloudcode.ide_session_index": "20240318_0004",
     "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "javascript.nodejs.core.library.configured.version": "18.16.0",
     "javascript.nodejs.core.library.typings.version": "18.16.20",
     "last_opened_file_path": "/Users/s.vladimirov/Project/TestPandell/Pandell",
@@ -66,7 +72,7 @@
       <option name="presentableId" value="Default" />
       <updated>1710779627297</updated>
       <workItem from="1710779628470" duration="4986000" />
-      <workItem from="1710784628650" duration="1475000" />
+      <workItem from="1710784628650" duration="7173000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -76,7 +82,15 @@
       <option name="project" value="LOCAL" />
       <updated>1710786101131</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1710786148730</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1710786148730</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
