@@ -1,0 +1,18 @@
+{
+  "name": "pandell",
+  "version": "1.0.0",
+  "description": "Test task for random number generation ",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "vladimirovsk"
+  },
+  "author": "svladimirov",
+  "license": "ISC",
+  "dependencies": {
+    "yargs": "^17.7.2"
+  }
+}
