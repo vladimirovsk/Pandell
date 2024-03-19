@@ -1,4 +1,4 @@
-name: Bitcoders Front
+name: Pandell test
 
 on:
   push:
@@ -45,7 +45,7 @@ jobs:
 ##          key: ${{ secrets.SERVER_SECRET }}
 #          port: 33100
 #          script: |
-#            cd project/BitCodersReact
+#            cd project/Pandell
 #            git checkout dev
 #            git pull
 #            docker-compose up -d --build
