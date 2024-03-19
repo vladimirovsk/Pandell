@@ -2,10 +2,9 @@
 
 This project is a Node.js program to generate a list of size unique numbers in random order between 1 and size (10000).
 I have implemented several algorithms to determine which one is more suitable
-- I used Set() class as a quick and easy way to create an array with unique values
-- I used Fisher–Yates shuffle The array 1-10000 is nothing but a regular array from 1 to 10000, then we shuffle the data around
-
-
+  - I used Set() class as a quick and easy way to create an array with unique values
+  - I used Fisher–Yates shuffle The array 1-10000 is nothing but a regular array from 1 to 10000, 
+    then we shuffle the data around
 
 ## Start the program
 
@@ -26,9 +25,9 @@ After executing the command, you will get a JSON object
 
 {
     runtime: 4 ms // script run time
-    type: 0 // type algorithms (0, 1)
+    type: 1 // type algorithms (0 or 1)
     size: 10000  // The size of the received array
-    data: [ 1000, 2, 5677] // Array data
+    data: [ 1000, 2, 5677......] // Array data
 }
 
 You can also specify the required array size, e.g.:
@@ -66,5 +65,10 @@ node index.js -t=1 -s=1000000
    ]
 }
     
+````
+
+## Start the tests
+````
+npm run test
 ````
 

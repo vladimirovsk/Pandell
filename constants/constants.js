@@ -1,0 +1,13 @@
+const ERROR_SIZE_IS_NOT_CORRECTED = 'Error: size is not correct'
+const ERROR_IN_GENERATE_UNIQUE_RANDOM_NUMBER = 'Error in generateUniqueRandomNumber:'
+const ERROR_IN_GENERATE_RANDOM_ARRAY_NUMBERS = 'Error in generateRandomArrayNumbers:'
+const INVALID_ALGORITM_TYPE = 'Invalid algorithm type'
+const ERROR_GENERATE_ARRAY_BY_ALGORITM_FISCHER = 'Error generate array by algoritm fischer'
+
+module.exports = {
+	ERROR_SIZE_IS_NOT_CORRECTED,
+	ERROR_IN_GENERATE_UNIQUE_RANDOM_NUMBER,
+	ERROR_IN_GENERATE_RANDOM_ARRAY_NUMBERS,
+	INVALID_ALGORITM_TYPE,
+	ERROR_GENERATE_ARRAY_BY_ALGORITM_FISCHER
+}
