@@ -4,7 +4,8 @@
   "description": "Test task for random number generation ",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -14,5 +15,8 @@
   "license": "ISC",
   "dependencies": {
     "yargs": "^17.7.2"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0"
   }
 }

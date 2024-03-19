@@ -1,3 +1,13 @@
+const {
+	ERROR_SIZE_IS_NOT_CORRECTED, 
+	ERROR_IN_GENERATE_UNIQUE_RANDOM_NUMBER,
+	ERROR_IN_GENERATE_RANDOM_ARRAY_NUMBERS,
+	ERROR_GENERATE_ARRAY_BY_ALGORITM_FISCHER
+	
+} = require ('./constants/constants')
+
+const logger = require('./helpers/logger');
+
 /**
  * Generates a new number until it finds a unique one
  * @param [set:Set] set as class Set
@@ -6,13 +16,18 @@
  */
  function generateUniqueRandomNumber(set, size) {
 	try {
+		if (size<=0 || typeof size !== 'number') {
+			throw new Error(ERROR_SIZE_IS_NOT_CORRECTED)
+		}
+
 		let randomNumber = Math.floor(Math.random() * size) + 1;
 		while (set.has(randomNumber)) {
 			randomNumber = Math.floor(Math.random() * size) + 1;
 		}
 		return randomNumber;
 	} catch (e) {
-		new Error(`Error generating unique random number: ${e.message}`);
+		logger.error(ERROR_IN_GENERATE_UNIQUE_RANDOM_NUMBER, e.message);
+		throw e;
 	}
 }
 
@@ -24,19 +39,17 @@
  */
   function generateRandomArrayNumbers(size) {
 	try {
-		if (size>0 && typeof size !== 'number') {
-			throw new Error(`Error: size is not correct`)
+		if (size<=0 || typeof size !== 'number') {
+			throw new Error(ERROR_SIZE_IS_NOT_CORRECTED)
 		}
-		console.log("SIZE:", size)
-
 		const set = new Set();
 		while (set.size < size) {
-			const randomNumber = generateUniqueRandomNumber(set, size);
-			set.add(randomNumber);
+			set.add(generateUniqueRandomNumber(set, size));
 		}
 		return Array.from(set);
 	} catch (e) {
-		new Error(`Error generate random array numbers ${e.message}`);
+			logger.error(ERROR_IN_GENERATE_RANDOM_ARRAY_NUMBERS, e.message);
+			throw e;
 	}
 }
 
@@ -48,6 +61,10 @@
  */
 function generateArrayByAlgoritmFischer(size){
 	try {
+		if (size<=0 || typeof size !== 'number') {
+			throw new Error(ERROR_SIZE_IS_NOT_CORRECTED)
+		}
+		
 		const array = Array.from({ length: size }, (_, i) => i + 1);
 		for (let i = array.length - 1; i > 0; i --) {
 			const randomIndex = Math.floor(Math.random() * (i + 1));
@@ -55,11 +72,13 @@ function generateArrayByAlgoritmFischer(size){
 		}
 		return array;
 	} catch (e) {
-		console.error(`Something went wrong ${e.message}`)
+		logger.error(ERROR_GENERATE_ARRAY_BY_ALGORITM_FISCHER, e.message);
+		throw e;
 	}
 }
 
 module.exports  = {
+	generateUniqueRandomNumber,
 	generateRandomArrayNumbers,
 	generateArrayByAlgoritmFischer
 }

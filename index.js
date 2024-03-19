@@ -1,7 +1,5 @@
 const yargs = require("yargs");
-const { generateRandomArrayNumbers, generateArrayByAlgoritmFischer } = require("./generate-array");
-
-const startTime = Date.now();
+const { selectTypeAlgoritm } = require("./select-type-algoritm");
 
 /**
  * Getting the external parameter of the array size
@@ -26,26 +24,6 @@ const argv = yargs
 const size = argv.size;
 const type = argv.type;
 
-let randomList = {}
+console.log(selectTypeAlgoritm({type, size}))
 
 
-switch (type) {
-	case 0: {
-		randomList = generateRandomArrayNumbers(size);
-		break;
-	}
-	case 1: {
-		randomList = generateArrayByAlgoritmFischer(size);
-		break;
-	}
-	default: {
-		throw new Error(`Invalid algorithm type: ${type}`);
-	}
-}
-
-console.log({
-	runtime: `${Date.now() - startTime} ms`,
-	type,
-	size: randomList.length,
-	data: randomList
-});
