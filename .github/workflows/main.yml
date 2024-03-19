@@ -32,12 +32,14 @@ jobs:
         run: |
           docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
           docker push vladimirovsk/pandell-test
-  deploy:
-    needs: [build, test]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to server
-        uses: appleboy/ssh-action@v0.1.4
+################################################################
+#I commented out this step because a real deploy to the server is not needed at this stage          
+#  deploy:
+#    needs: [build, test]
+#    runs-on: ubuntu-latest
+#    steps:
+#      - name: Deploy to server
+#        uses: appleboy/ssh-action@v0.1.4
 #        with:
 #          host: test-host
 #          username: svladimirov
